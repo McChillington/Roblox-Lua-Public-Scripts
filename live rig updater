@@ -1,4 +1,5 @@
 --put in serverscriptservice
+--normal script
 
 local statue = game.Workspace.rockstarashton12Rig --local rig path
 local id = game.Players:GetUserIdFromNameAsync("RockstarAshton12") --username real
