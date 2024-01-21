@@ -1,0 +1,7 @@
+--put in serverscriptservice
+
+local statue = game.Workspace.rockstarashton12Rig --local rig path
+local id = game.Players:GetUserIdFromNameAsync("RockstarAshton12") --username real
+local appearance = game.Players:GetHumanoidDescriptionFromUserId(id)
+
+statue.Humanoid:ApplyDescription(appearance)
