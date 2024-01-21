@@ -1,0 +1,7 @@
+badgeid = 2153129522 --badgeid
+
+game.Players.PlayerAdded:connect(function(p)
+wait(.5)
+badgeserve = game:GetService("BadgeService")
+badgeserve:AwardBadge(p.userId,badgeid)
+end)
