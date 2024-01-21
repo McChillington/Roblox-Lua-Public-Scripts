@@ -1,6 +1,6 @@
 --put under button
-
 --make sure the position is corrected
+--localscript
 
 local btn = script.Parent
 
