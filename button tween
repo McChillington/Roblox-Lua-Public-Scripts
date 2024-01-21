@@ -1,0 +1,36 @@
+--put under button
+
+--make sure the position is corrected
+
+local btn = script.Parent
+
+local isHovering = false
+
+
+btn.MouseEnter:Connect(function()
+
+	isHovering = true
+
+	btn:TweenSize(UDim2.new(0, 137, 0, 39), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 0.2, true)
+end)
+
+btn.MouseLeave:Connect(function()
+
+	isHovering = false
+
+	btn:TweenSize(UDim2.new(0, 128 , 0, 33), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 0.2, true)
+end)
+
+btn.MouseButton1Down:Connect(function()
+
+	btn:TweenSize(UDim2.new(0, 110 , 0, 25), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 0.2, true)
+end)
+
+btn.MouseButton1Up:Connect(function()
+
+	if not isHovering then
+		btn:TweenSize(UDim2.new(0, 128 , 0, 33), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 0.2, true)
+	else
+		btn:TweenSize(UDim2.new(0, 137, 0, 39), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 0.2, true)
+	end
+end)
