@@ -1,0 +1,25 @@
+--put inside the play button
+
+local cam = workspace.CurrentCamera
+local camPart = workspace:WaitForChild("menucam") --the camera part
+local mouse = game:GetService("Players").LocalPlayer:GetMouse()
+
+repeat
+	wait()
+	cam.CameraType = Enum.CameraType.Scriptable
+until
+cam.CameraType == Enum.CameraType.Scriptable
+
+local maxTilt = 10
+game:GetService("RunService").RenderStepped:Connect(function()
+	cam.CFrame = camPart.CFrame * CFrame.Angles(
+		math.rad((((mouse.Y - mouse.ViewSizeY / 2) / mouse.ViewSizeY)) * -maxTilt),
+		math.rad((((mouse.X - mouse.ViewSizeX / 2) / mouse.ViewSizeX)) * -maxTilt),
+		0
+	)
+end)
+
+script.Parent.MouseButton1Up:Connect(function()
+	cam.CameraType = Enum.CameraType.Custom
+	script.Parent.Parent.Visible = false
+end)
