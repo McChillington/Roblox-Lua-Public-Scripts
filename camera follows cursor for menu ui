@@ -1,6 +1,6 @@
 --put inside the play button
 
-local cam = workspace.CurrentCamera
+local cam = workspace.CurrentCamera --camera location
 local camPart = workspace:WaitForChild("menucam") --the camera part
 local mouse = game:GetService("Players").LocalPlayer:GetMouse()
 
@@ -21,5 +21,5 @@ end)
 
 script.Parent.MouseButton1Up:Connect(function()
 	cam.CameraType = Enum.CameraType.Custom
-	script.Parent.Parent.Visible = false
+	script.Parent.Parent.Visible = false --first frame
 end)
