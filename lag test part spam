@@ -7,14 +7,14 @@ local folder = workspace:WaitForChild("parts")
 local button = game.StarterGui.ScreenGui:WaitForChild("GuiButton")
 
 button.MouseButton1Click:Connect(function()
-		while true do
-				local part = Instance.new("Part")
-				part.Transparency = 0.5
-				part.Parent = folder
-				part.Position += Vector3.new(0, 10, 0)
-				task.wait(0.005)
-				print("part added") --remove this if you dont want it to flood the console
-		end
+	while true do
+			local part = Instance.new("Part")
+			part.Transparency = 0.5
+			part.Parent = folder
+			part.Position += Vector3.new(0, 10, 0)
+			task.wait(0.005)
+		print("part added") --remove this if you dont want it to flood the console
+	end
 end)
 
 --i was on mobile when i made this revamp later today
